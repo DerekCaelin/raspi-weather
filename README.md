@@ -3,6 +3,7 @@
 
 # raspi-weather
 a weather application for the raspberry pi and the Inky pHAT (https://shop.pimoroni.com/products/inky-phat?variant=12549254217811)
+
 The script displays:
 - the current temperature
 - today's date
