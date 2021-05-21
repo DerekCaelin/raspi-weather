@@ -12,7 +12,7 @@ The script displays:
 - a verbal description of today's weather
 - weather icons drawn with math and python's drawing library
 
-A valueable resource: https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-inky-phat
+A valuable resource: https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-inky-phat
 
 ## Installation
 
