@@ -70,6 +70,7 @@ w, h = font.getsize(currentDate)
 x = (inky_display.WIDTH / 2) - (w / 2)
 draw.text((x+15,5), currentDate, inky_display.WHITE, font2)
 
+# Make your own icons to align with weather undergrounds icon set: https://ibm.co/TWCICv2
 
 # big moon
 if (icon ==  27) or (icon == 29) or (icon == 31) or (icon == 33):
