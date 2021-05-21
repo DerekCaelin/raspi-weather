@@ -35,7 +35,7 @@ https://www.wunderground.com/
 
 - APIKEY
 
-### Set the raspberru pi to run your script every 30 minutes
+### Set the raspberry pi to run your script every 30 minutes
 > crontab -e
 
 At the very bottom of your crontab file, add the following line:
