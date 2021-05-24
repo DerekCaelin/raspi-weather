@@ -52,9 +52,9 @@ if icon is None: #in the evenings the first response in the array is null
 #icon = 41
 
 #make message
-nowTemp = str(currentTemp) + "F"
-rangeMessage = str(calendarDayTemperatureMin[0]) + "-" + str(calendarDayTemperatureMax[0]) + "F"
-futureMessage = str(tomorrowMin) + "-" + str(tomorrowMax) + "F"
+nowTemp = str(currentTemp) + " " + u"\N{DEGREE SIGN}" + "F"
+rangeMessage = str(calendarDayTemperatureMin[0]) + "-" + str(calendarDayTemperatureMax[0]) +" "+ u"\N{DEGREE SIGN}"  +"F"
+futureMessage = str(tomorrowMin) + "-" + str(tomorrowMax) + " " + u"\N{DEGREE SIGN}"  + "F"
 
 #draw the standard stuff
 draw.rectangle((0,0,212,104),inky_display.BLACK)
