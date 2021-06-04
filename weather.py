@@ -22,7 +22,7 @@ STATION = #insert station ID from https://www.wunderground.com/
 ZIPCODE = #insert Zip Code  
 
 #get current conditions from weather underground
-query = "https://api.weather.com/v2/pws/observations/current?stationId="+STATION+"6&format=json&units=e&apiKey="+APIKEY
+query = "https://api.weather.com/v2/pws/observations/current?stationId="+STATION+"&format=json&units=e&apiKey="+APIKEY
 url = requests.get(query)
 text = url.text
 x = json.loads(text)
