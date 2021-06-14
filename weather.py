@@ -63,7 +63,25 @@ draw.line((0,0,115,115),inky_display.RED, width=30)
 draw.text((5, 5), nowTemp, inky_display.WHITE, font)
 draw.text((5, 30), "Today: "+rangeMessage, inky_display.WHITE, font2)
 draw.text((5, 46), dayOfWeek +": " + futureMessage, inky_display.WHITE, font2)
-draw.text((5, 75), narrative[0], inky_display.WHITE, font2)
+#draw.text((5, 75), narrative[0], inky_display.WHITE, font2)
+# Start Variable Font Size and wrapping for Narrative
+y_top = 60		# Top of the narrative area
+y_bottom = 100		# Bottom of the narrative area
+fontSize = 9  		# Starting Font Size
+fontMaxSize = 30	# Maximum font size
+
+fontNAR = ImageFont.truetype(FredokaOne,fontSize)
+while (fontNAR.getsize(narrative[0])[0] <= int(inky_display.width * .95)) and (fontSize < fontMaxSize):
+	# iterate until the text size is just larger than the criteria
+	fontSize += 1
+	fontNAR = ImageFont.truetype(FredokaOne, fontSize)
+fontSize -= 1
+fontNAR = ImageFont.truetype(FredokaOne,fontSize)
+narrative_w, narrative_h = fontNAR.getsize(narrative[0])
+narrative_x = int((inky_display.width - narrative_w) / 2)
+narrative_y = int(y_top + ((y_bottom - y_top - narrative_h) / 2))
+draw.text((narrative_x, narrative_y), narrative[0], inky_display.WHITE, fontNAR)
+# End Variable Font Size for Narrative
 
 #date
 w, h = font.getsize(currentDate)
