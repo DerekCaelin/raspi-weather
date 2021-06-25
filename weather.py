@@ -37,6 +37,7 @@ y = json.loads(wtext)
 #print(x['observations'][0]['imperial']['temp'])
 currentTemp = x['observations'][0]['imperial']['temp']
 currentDate = x['observations'][0]['obsTimeLocal'].split(' ')[0].split('-',1)[1]
+currentTime = x['observations'][0]['obsTimeLocal'].split(' ')[1]
 calendarDayTemperatureMax = y['calendarDayTemperatureMax']
 calendarDayTemperatureMin = y['calendarDayTemperatureMin']
 tomorrowMax = y['calendarDayTemperatureMax'][1]
@@ -64,7 +65,7 @@ draw.text((5, 5), nowTemp, inky_display.WHITE, font)
 draw.text((5, 30), "Today: "+rangeMessage, inky_display.WHITE, font2)
 draw.text((5, 46), dayOfWeek +": " + futureMessage, inky_display.WHITE, font2)
 #draw.text((5, 75), narrative[0], inky_display.WHITE, font2)
-# Start Variable Font Size and wrapping for Narrative
+# Start Variable Font Size for Narrative
 y_top = 60		# Top of the narrative area
 y_bottom = 100		# Bottom of the narrative area
 fontSize = 9  		# Starting Font Size
@@ -83,10 +84,10 @@ narrative_y = int(y_top + ((y_bottom - y_top - narrative_h) / 2))
 draw.text((narrative_x, narrative_y), narrative[0], inky_display.WHITE, fontNAR)
 # End Variable Font Size for Narrative
 
-#date
-w, h = font.getsize(currentDate)
+#date and time
+w, h = fontSML.getsize(currentDate + " " + currentTime[0:5])
 x = (inky_display.WIDTH / 2) - (w / 2)
-draw.text((x+15,5), currentDate, inky_display.WHITE, font2)
+draw.text((x,5), (currentDate + " " + currentTime[0:5]), inky_display.WHITE, fontSML)
 
 # Make your own icons to align with weather undergrounds icon set: https://ibm.co/TWCICv2
 
