@@ -143,7 +143,7 @@ if (icon == 27) or (icon == 28) or (icon == 38):
 	draw.ellipse((sx+10, sy+5, sx+25, sy+15), inky_display.WHITE)
 
 # small cloud
-if (icon is 33) or (icon is 34):
+if (icon == 33) or (icon == 34):
 	sx = 145
 	sy = 35
 
